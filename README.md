@@ -34,6 +34,16 @@ O pipeline realiza a ingestão de arquivos JSON, processa os dados utilizando Py
 
 ---
 
+## Domínio do Problema
+
+Este projeto utiliza dados públicos de Ocorrências Aeronáuticas disponibilizados pela ANAC.
+
+O conjunto de dados reúne informações sobre ocorrências envolvendo aeronaves civis no Brasil, incluindo características do evento, localização, tipo de ocorrência, fase do voo, aeronave envolvida e demais informações relevantes para análises de segurança operacional.
+
+Embora o foco do projeto seja demonstrar conceitos de Engenharia de Dados, a utilização de um conjunto de dados real permite simular desafios comuns encontrados em ambientes corporativos, como ingestão, tratamento, padronização e disponibilização de dados para consumo analítico.
+
+---
+
 ## Organização da Solução
 
 ```text
@@ -49,6 +59,8 @@ O pipeline realiza a ingestão de arquivos JSON, processa os dados utilizando Py
 
 A organização do projeto segue a arquitetura Medallion, separando as responsabilidades de cada camada do pipeline e facilitando a manutenção, reutilização e evolução da solução.
 
+---
+
 ## Fonte dos Dados
 
 Os dados utilizados neste projeto são provenientes do portal de **Dados Abertos da Agência Nacional de Aviação Civil (ANAC)**, disponibilizados para uso público com o objetivo de promover transparência e incentivar análises sobre segurança operacional da aviação civil brasileira.
@@ -58,5 +70,29 @@ Os dados utilizados neste projeto são provenientes do portal de **Dados Abertos
 **Fonte oficial:** https://sistemas.anac.gov.br/dadosabertos/Seguranca%20Operacional/Ocorrencia/
 
 Os arquivos são disponibilizados no formato JSON e utilizados como fonte de ingestão para o pipeline implementado neste projeto.
+
+---
+
+## Fluxo do Pipeline
+
+                    Dados Abertos ANAC
+                           │
+                           ▼
+          Azure Storage (Container - JSON)
+                           │
+                           ▼
+            Azure Databricks (PySpark)
+                           │
+        ┌──────────────────┼──────────────────┐
+        ▼                  ▼                  ▼
+ Bronze (Delta)      Silver (Delta)      Gold (Delta)
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           │
+                           ▼
+           Azure Storage (Container Delta Lake)
+                           │
+                           ▼
+                 Analytics / BI
 
 ---
