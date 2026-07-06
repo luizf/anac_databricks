@@ -50,7 +50,6 @@ Embora o foco do projeto seja demonstrar conceitos de Engenharia de Dados, a uti
 
 ```text
 .
-├── resource/      # Dados de origem (JSON)
 ├── bronze/        # Camada Bronze (dados brutos)
 ├── silver/        # Camada Silver (dados tratados)
 ├── gold/          # Camada Gold (dados para consumo analítico)
