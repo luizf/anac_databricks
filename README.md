@@ -35,7 +35,7 @@ O pipeline realiza a ingestão de arquivos JSON, processa os dados utilizando Py
 ---
 
 ## Estrutura do Projeto
-
+```text
 anac_databricks/
 │
 ├── anac/
@@ -57,7 +57,7 @@ anac_databricks/
 │   └── arquitetura.png          # Diagrama da arquitetura
 │
 └── README.md
-
+```text
 A estrutura foi organizada seguindo o padrão da arquitetura Medallion, separando as camadas de ingestão, transformação e disponibilização dos dados, além de manter configurações reutilizáveis e documentação do projeto.
 
 ---
