@@ -1,5 +1,15 @@
 # Data Engineering Pipeline com Azure, Databricks e PySpark
 
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+
+![PySpark](https://img.shields.io/badge/PySpark-4.0-orange)
+
+![Azure](https://img.shields.io/badge/Azure-Cloud-blue)
+
+![Databricks](https://img.shields.io/badge/Databricks-Data%20Engineering-red)
+
+![Delta](https://img.shields.io/badge/Delta%20Lake-Storage-green)
+
 ## Objetivo
 
 Este projeto demonstra a construção de um pipeline de Engenharia de Dados utilizando Azure, Databricks e PySpark seguindo a arquitetura Medallion.
@@ -21,6 +31,34 @@ O pipeline realiza a ingestão de arquivos JSON, processa os dados utilizando Py
 * Python
 * PySpark
 * Delta Lake
+
+---
+
+## Estrutura do Projeto
+
+anac_databricks/
+│
+├── anac/
+│   ├── resource/
+│   │   └── origem/              # Arquivos JSON de origem
+│   │
+│   ├── bronze/                  # Dados brutos
+│   │
+│   ├── silver/                  # Dados tratados
+│   │
+│   ├── gold/                    # Dados analíticos
+│   │
+│   ├── params/
+│   │   └── global_config/       # Configurações reutilizáveis
+│   │
+│   └── notebooks/               # Notebooks Databricks
+│
+├── docs/
+│   └── arquitetura.png          # Diagrama da arquitetura
+│
+└── README.md
+
+A estrutura foi organizada seguindo o padrão da arquitetura Medallion, separando as camadas de ingestão, transformação e disponibilização dos dados, além de manter configurações reutilizáveis e documentação do projeto.
 
 ---
 
