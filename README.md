@@ -34,34 +34,6 @@ O pipeline realiza a ingestão de arquivos JSON, processa os dados utilizando Py
 
 ---
 
-## Estrutura do Projeto
-```text
-anac_databricks/
-│
-├── anac/
-│   ├── resource/
-│   │   └── origem/              # Arquivos JSON de origem
-│   │
-│   ├── bronze/                  # Dados brutos
-│   │
-│   ├── silver/                  # Dados tratados
-│   │
-│   ├── gold/                    # Dados analíticos
-│   │
-│   ├── params/
-│   │   └── global_config/       # Configurações reutilizáveis
-│   │
-│   └── notebooks/               # Notebooks Databricks
-│
-├── docs/
-│   └── arquitetura.png          # Diagrama da arquitetura
-│
-└── README.md
-```text
-A estrutura foi organizada seguindo o padrão da arquitetura Medallion, separando as camadas de ingestão, transformação e disponibilização dos dados, além de manter configurações reutilizáveis e documentação do projeto.
-
----
-
 ## Fonte dos Dados
 
 Os dados utilizados neste projeto são provenientes do portal de **Dados Abertos da Agência Nacional de Aviação Civil (ANAC)**, disponibilizados para uso público com o objetivo de promover transparência e incentivar análises sobre segurança operacional da aviação civil brasileira.
