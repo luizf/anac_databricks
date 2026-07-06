@@ -12,7 +12,7 @@
 
 ## Objetivo
 
-Este projeto demonstra a construção de um pipeline de Engenharia de Dados utilizando Azure, Databricks e PySpark seguindo a arquitetura Medallion.
+O projeto simula um cenário corporativo de Engenharia de Dados, realizando ingestão, transformação e disponibilização de dados públicos da ANAC utilizando uma arquitetura Lakehouse baseada em Azure Databricks e Delta Lake.
 
 ---
 
