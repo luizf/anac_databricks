@@ -8,7 +8,7 @@ Este projeto demonstra a construção de um pipeline de Engenharia de Dados util
 
 ## Arquitetura da Solução
 
-![Arquitetura](anac/docs/arquitetura.png)
+![Arquitetura](docs/arquitetura.png)
 
 O pipeline realiza a ingestão de arquivos JSON, processa os dados utilizando PySpark no Azure Databricks e persiste cada etapa em Delta Lake seguindo a arquitetura Medallion.
 
