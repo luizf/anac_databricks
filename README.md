@@ -34,6 +34,21 @@ O pipeline realiza a ingestão de arquivos JSON, processa os dados utilizando Py
 
 ---
 
+## Organização da Solução
+
+```text
+.
+├── resource/      # Dados de origem (JSON)
+├── bronze/        # Camada Bronze (dados brutos)
+├── silver/        # Camada Silver (dados tratados)
+├── gold/          # Camada Gold (dados para consumo analítico)
+├── params/        # Configurações e parâmetros reutilizáveis
+├── docs/          # Documentos
+└── README.md
+```
+
+A organização do projeto segue a arquitetura Medallion, separando as responsabilidades de cada camada do pipeline e facilitando a manutenção, reutilização e evolução da solução.
+
 ## Fonte dos Dados
 
 Os dados utilizados neste projeto são provenientes do portal de **Dados Abertos da Agência Nacional de Aviação Civil (ANAC)**, disponibilizados para uso público com o objetivo de promover transparência e incentivar análises sobre segurança operacional da aviação civil brasileira.
