@@ -1,4 +1,4 @@
-# Data Engineering Pipeline com Azure, Databricks e PySpark
+# Azure Lakehouse Data Engineering Pipeline | Databricks, PySpark e Delta Lake
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 
@@ -28,8 +28,10 @@ O pipeline realiza a ingestão de arquivos JSON, processa os dados utilizando Py
 
 * Azure
 * Azure Databricks
+* Azure Storage
 * Python
 * PySpark
+* Spark SQL
 * Delta Lake
 
 ---
