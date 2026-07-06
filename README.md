@@ -75,24 +75,31 @@ Os arquivos são disponibilizados no formato JSON e utilizados como fonte de ing
 
 ## Fluxo do Pipeline
 
-                    Dados Abertos ANAC
-                           │
-                           ▼
-          Azure Storage (Container - JSON)
-                           │
-                           ▼
-            Azure Databricks (PySpark)
-                           │
-        ┌──────────────────┼──────────────────┐
-        ▼                  ▼                  ▼
- Bronze (Delta)      Silver (Delta)      Gold (Delta)
-        │                  │                  │
-        └──────────────────┼──────────────────┘
-                           │
-                           ▼
-           Azure Storage (Container Delta Lake)
-                           │
-                           ▼
-                 Analytics / BI
+```text
+                     Dados Abertos ANAC
+                      (Arquivos JSON)
+                             │
+                             ▼
+              Azure Storage (Container)
+                 resource/origem (JSON)
+                             │
+                             ▼
+             Azure Databricks + PySpark
+                             │
+                             ▼
+         Bronze (Delta Lake - Container Azure)
+        Dados brutos persistidos em Delta
+                             │
+                             ▼
+         Silver (Delta Lake - Container Azure)
+      Dados tratados e padronizados
+                             │
+                             ▼
+          Gold (Delta Lake - Container Azure)
+      Dados consolidados para Analytics
+                             │
+                             ▼
+               Consumo Analítico / BI
+```
 
 ---
